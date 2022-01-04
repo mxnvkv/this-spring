@@ -12,6 +12,14 @@ public class TrackCoach implements Coach {
     this.fortuneService = fortuneService;
   }
 
+  public void doMyStartupStuff() {
+    System.out.println("TrackCoach: inside method doMyStartupStuff");
+  }
+
+  public void doMyCleanupStuffYoYo() {
+    System.out.println("TrackCoach: inside method doMyCleanupStuffYoYo");
+  }
+
   @Override
   public String getDailyWorkout() {
     return "Run a hard 5k";
