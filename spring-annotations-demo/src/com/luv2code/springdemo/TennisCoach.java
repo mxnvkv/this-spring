@@ -2,11 +2,13 @@ package com.luv2code.springdemo;
 
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 @Component
 public class TennisCoach implements Coach {
 
   @Autowired
+  @Qualifier("randomFortuneService")
   private FortuneService fortuneService;
 
   public TennisCoach() {
