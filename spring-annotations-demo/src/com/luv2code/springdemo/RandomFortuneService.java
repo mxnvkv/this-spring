@@ -1,8 +1,8 @@
 package com.luv2code.springdemo;
 
-import java.util.Random;
-
 import org.springframework.stereotype.Component;
+
+import java.util.Random;
 
 @Component
 public class RandomFortuneService implements FortuneService {
