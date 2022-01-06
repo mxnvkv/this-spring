@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Component
 public class CricketCoach implements Coach {
 
-  FortuneService fortuneService;
+  private FortuneService fortuneService;
 
   @Autowired
   public CricketCoach(FortuneService fortuneService) {

@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Component
 public class TennisCoach implements Coach {
 
-  FortuneService fortuneService;
+  @Autowired
+  private FortuneService fortuneService;
 
   public TennisCoach() {
     System.out.println(">> TennisCoach: inside default constructor");
@@ -17,11 +18,11 @@ public class TennisCoach implements Coach {
   //   this.fortuneService = fortuneService;
   // }
 
-  @Autowired
-  public void doSomeCrazyStuff(FortuneService fortuneService) {
-    System.out.println(">> TennisCoach: inside doSomeCrazyStuff");
-    this.fortuneService = fortuneService;
-  }
+  // @Autowired
+  // public void doSomeCrazyStuff(FortuneService fortuneService) {
+  //   System.out.println(">> TennisCoach: inside doSomeCrazyStuff");
+  //   this.fortuneService = fortuneService;
+  // }
 
   @Override
   public String getDailyWorkout() {
