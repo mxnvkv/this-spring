@@ -7,14 +7,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 @Component
 public class CricketCoach implements Coach {
 
-  @Autowired
-  @Qualifier("happyFortuneService")
   private FortuneService fortuneService;
 
-  // @Autowired
-  // public CricketCoach(FortuneService fortuneService) {
-  //   this.fortuneService = fortuneService;
-  // }
+  @Autowired
+  public CricketCoach(@Qualifier("happyFortuneService") FortuneService fortuneService) {
+    this.fortuneService = fortuneService;
+  }
 
   @Override
   public String getDailyWorkout() {
