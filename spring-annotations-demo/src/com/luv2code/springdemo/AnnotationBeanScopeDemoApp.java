@@ -24,5 +24,8 @@ public class AnnotationBeanScopeDemoApp {
 
     System.out.println("Memory location for alphaCoach: " + alphaCoach);
 
+    // close the context
+    context.close();
+
   }
 }

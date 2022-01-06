@@ -5,8 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
-@Scope("prototype")
 public class TennisCoach implements Coach {
 
   @Autowired
@@ -27,6 +29,16 @@ public class TennisCoach implements Coach {
   //   System.out.println(">> TennisCoach: inside doSomeCrazyStuff");
   //   this.fortuneService = fortuneService;
   // }
+
+  @PostConstruct
+  public void doMyStartupStuff() {
+    System.out.println(">> TennisCoach: inside doMyStartupStuff()");
+  }
+
+  @PreDestroy
+  public void doMyCleanupStuff() {
+    System.out.println(">> TennisCoach: inside doMyCleanupStuff()");
+  }
 
   @Override
   public String getDailyWorkout() {
