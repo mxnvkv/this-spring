@@ -1,4 +1,4 @@
-package main.java.com.luv2code.springdemo;
+package com.luv2code.springdemo.mvc;
 
 import java.io.*;
 import javax.servlet.http.*;
