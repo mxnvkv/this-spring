@@ -27,6 +27,7 @@ public class Instructor {
   private InstructorDetail instructorDetail;
 
   @OneToMany(
+    fetch = FetchType.LAZY,
     mappedBy = "instructor",
     cascade = {
       CascadeType.DETACH,
