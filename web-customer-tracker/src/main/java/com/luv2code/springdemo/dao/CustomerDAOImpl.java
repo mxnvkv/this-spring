@@ -7,7 +7,6 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
@@ -15,6 +14,15 @@ public class CustomerDAOImpl implements CustomerDAO {
 
   @Autowired
   private SessionFactory sessionFactory;
+
+  @Override
+  public Customer getCustomer(int id) {
+    Session session = sessionFactory.getCurrentSession();
+
+    Customer customer = session.get(Customer.class, id);
+
+    return customer;
+  }
 
   @Override
   public List<Customer> getCustomers() {
