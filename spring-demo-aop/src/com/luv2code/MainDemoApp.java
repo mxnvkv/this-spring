@@ -1,5 +1,6 @@
 package com.luv2code;
 
+import com.luv2code.aopdemo.Account;
 import com.luv2code.aopdemo.DemoConfig;
 import com.luv2code.aopdemo.dao.AccountDAO;
 import com.luv2code.aopdemo.dao.MembershipDAO;
@@ -20,10 +21,13 @@ public class MainDemoApp {
     MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
 
     // call the business method
-    accountDAO.addAccount();
+    Account account = new Account();
+    accountDAO.addAccount(account, true);
+    accountDAO.doWork();
 
     // call the membership business method
     membershipDAO.addSillyMember();
+    membershipDAO.goToSleep();
 
     // close the context
     context.close();
