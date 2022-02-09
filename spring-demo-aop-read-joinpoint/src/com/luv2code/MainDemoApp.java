@@ -23,6 +23,8 @@ public class MainDemoApp {
     // call the business method
     Account account = new Account();
     accountDAO.addAccount(account, true);
+    account.setName("Madhu");
+    account.setLevel("Platinum");
     accountDAO.doWork();
 
     // call the accountDAO getter/setter methods
