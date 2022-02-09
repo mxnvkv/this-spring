@@ -20,7 +20,7 @@ public class AfterReturningDemoApp {
     List<Account> accounts = accountDAO.findAccounts();
 
     // display the accounts
-    System.out.println("Main Program: AfterReturningDemoApp");
+    System.out.println("\nMain Program: AfterReturningDemoApp");
     System.out.println("----");
 
     System.out.println(accounts);
