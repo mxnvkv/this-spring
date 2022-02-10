@@ -19,7 +19,9 @@ public class AfterThrowingDemoApp {
     List<Account> accounts = null;
 
     try {
-      accounts = accountDAO.findAccounts();
+      // add e boolean flag to simulate exceptions
+      boolean tripWire = true;
+      accounts = accountDAO.findAccounts(tripWire);
     } catch (Exception e) {
       System.out.println("\nMain Program ... caught exception: " + e);
     }

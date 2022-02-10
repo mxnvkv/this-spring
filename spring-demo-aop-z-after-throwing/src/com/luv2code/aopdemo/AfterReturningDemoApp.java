@@ -1,7 +1,6 @@
 package com.luv2code.aopdemo;
 
 import com.luv2code.aopdemo.dao.AccountDAO;
-import com.luv2code.aopdemo.dao.MembershipDAO;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
@@ -17,7 +16,7 @@ public class AfterReturningDemoApp {
     AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 
     // call method to find the accounts
-    List<Account> accounts = accountDAO.findAccounts();
+    List<Account> accounts = accountDAO.findAccounts(false);
 
     // display the accounts
     System.out.println("\nMain Program: AfterReturningDemoApp");
